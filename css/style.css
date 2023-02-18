@@ -77,10 +77,13 @@ a {
 }
 
 :root {
-  --aside-background-color-name: #f3e9e8;
+  /* --aside-background-color-name: #f3e9e8;  */
+  --aside-background-color-name: #ebcd9b;
   --aside-background-color-info: #c7e5ff;
   --personal-info-background: #c7e5ff;
   --subtitle-color: #5f5e5f;
+  --main-info-color:#538fad;
+  --main-text-color: #ebcd9b;
 }
 
 /*<div class="download-pdf">
@@ -121,7 +124,7 @@ a {
     font-size: 23px;
     font-weight: 600;
     text-transform: uppercase;
-    border: solid 3px #ffffff;
+    border: solid 3px var(--main-info-color);
     border-radius: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -133,11 +136,11 @@ a {
   .header__img {
     margin-top: 10px;
     border-radius: 5px;
-    border: solid 3px #ffffff;
+    border: solid 3px var(--main-info-color);
   }
 
   .main-info {
-    background-color: #bcd3ec;
+    background-color: var(--main-info-color);
     border-radius: 5px;
   }
 
@@ -166,6 +169,11 @@ a {
     font-weight: 400;
     text-align: left;
   }
+
+    .company_link {
+      display: none;
+  
+    }
 
   .nav-info__style {
     display: flex;
@@ -252,6 +260,8 @@ a {
     margin-top: 10px;
   }
 
+    
+
   .list_style {
     list-style-type: disc;
     margin-top: 10px;
@@ -312,6 +322,16 @@ a {
     margin-bottom: 30px;
   }
 
+  .hidden_open:nth-last-child(n+2)::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .recommendation-info {
     padding-left: 10px;
     padding-right: 10px;
@@ -364,7 +384,7 @@ a {
     font-size: 35px;
     font-weight: 600;
     text-transform: uppercase;
-    border: solid 3px #ffffff;
+    border: solid 3px var(--main-info-color);
     border-radius: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -375,11 +395,11 @@ a {
   .header__img {
     margin-top: 10px;
     border-radius: 5px;
-    border: solid 3px #ffffff;
+    border: solid 3px var(--main-info-color);
   }
 
   .main-info {
-    background-color: #bcd3ec;
+    background-color: var(--main-info-color);
     border-radius: 5px;
   }
 
@@ -400,6 +420,7 @@ a {
     font-size: 15px;
     font-weight: 700;
     text-align: left;
+    
   }
 
   .main-text__style {
@@ -407,6 +428,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     text-align: left;
+    
   }
 
   .nav-info__style {
@@ -478,6 +500,11 @@ a {
   .main-subtitle__style {
     margin-top: 10px;
   }
+
+    .company_link {
+      display: none;
+  
+    }
 
   .experience-info {
     padding-left: 10px;
@@ -553,6 +580,29 @@ a {
     margin-bottom: 30px;
   }
 
+  .hidden_skill {
+    margin-bottom: 15px;
+  }
+
+    .hidden_open:nth-last-child(n+2)::after {
+      content: "";
+      display: flex;
+      width: 100%;
+      height: 1px;
+      background-color: var(--aside-background-color-name);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+  /* .hidden_skill::after {
+    content: "";
+      display: flex;
+      width: 100%;
+      height: 1px;
+      background-color: var(--aside-background-color-name);
+      margin-top: 20px;
+
+  }  */
   .recommendation-info {
     padding-left: 10px;
     padding-right: 10px;
@@ -588,8 +638,9 @@ a {
 
   .header {
     display: flex;
-    width: 680px;
+    width: 735px;
     margin: auto;
+   
   }
 
   .header-box {
@@ -598,6 +649,7 @@ a {
     border: solid 2px #000000;
     margin-top: 20px;
     margin-left: 60px;
+    
   }
   .header__img {
     display: none;
@@ -629,13 +681,28 @@ a {
     background-color: #ffffff;
   }
 
+  
+
   .title__style {
     font-family: Manrope;
     font-size: 23px;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 13px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    
+    
+  }
+
+  .title_tips::after {
+    font-size: 10px;
+    padding-left: 9px;
+    content: 'наведіть мишкою на компанію для перегляду обов`язків';
+    display: flex;  
+    width: auto;
+    background-color: var(--aside-background-color-name);
+    border-radius: 5px;
+    
   }
 
   .nav-info__style {
@@ -648,6 +715,21 @@ a {
     font-weight: 700;
   }
 
+  .company_link {
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    width: 193px;
+    height: auto;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 3px;
+    border: solid 2px var(--main-info-color);
+    border-radius: 5px;
+    
+  }
+
   .main-text__style {
     font-family: Manrope;
     font-size: 14px;
@@ -657,8 +739,9 @@ a {
   .nav-info__style {
     display: flex;
     flex-direction: column;
-    max-width: 395px;
+    /* max-width: 395px; */
     margin: auto;
+    padding-bottom: 10px;
   }
   .interests__item {
     display: flex;
@@ -707,7 +790,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 450px;
-    background-color: #bcd3ec;
+    background-color: var(--main-info-color);
     margin-left: 10px;
     border-radius: 5px;
   }
@@ -718,22 +801,24 @@ a {
     padding-bottom: 0px;
   }
 
-  .main-about::after {
+  /* .main-about::after {
     content: "";
     display: flex;
     width: 100%;
     height: 1px;
     background-color: var(--aside-background-color-name);
     margin-top: 20px;
-  }
+  } */
 
   .main-about__text {
     text-align: justify;
+    /* color: var(--aside-background-color-name); */
   }
 
   .main-subtitle__style {
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    /* color: var(--aside-background-color-name); */
   }
 
   
@@ -754,26 +839,62 @@ a {
 
   .hidden_skill {
     display: none;
+   width: 100%;
+    
+    position: absolute;
   }
+
+    .skill_line::after {
+      content: "";
+      display: flex;
+      width: 100%;
+      height: 1px;
+      background-color: var(--aside-background-color-name);
+      margin-top: 5px;
+  
+    }
 
   .hidden_open {
     cursor: pointer;
+    position: relative;
     
+  }
+
+    
+
+  .hidden_open:hover {
+    background-color: var(--aside-background-color-name);
+    border-radius: 5px;
+
   }
 
   .hidden_open:hover .hidden_skill {
     display: flex;
+    width: 167%;
     cursor: pointer;
-    background-color: rgba(0, 255, 255, 0.349);
+    background-color: var(--aside-background-color-name);
+    border: solid 2px var(--main-info-color);
     border-radius: 5px;
+    z-index: 5;
     
     
+    right: -2px;
+    
+    
+  }
+
+  .margin_top {
+    margin-top: 10px;
   }
 
   .list_style {
     list-style-type: disc;
     margin-top: 10px;
     margin-left: 18px;
+  }
+
+  #none:nth-child(15){
+    list-style: none;
   }
 
   .education-info {
@@ -807,6 +928,7 @@ a {
   .skills-info {
     padding-left: 10px;
     padding-right: 10px;
+    display: none;
   }
 
   .skills-info::after {
@@ -822,7 +944,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 395px;
+    max-width: 425px;
     margin: auto;
   }
 
@@ -831,6 +953,7 @@ a {
   }
 
   .recommendation-info {
+    
     padding-left: 10px;
     padding-right: 10px;
   }
