@@ -615,6 +615,10 @@ a {
 }
 
 @media (min-width: 770px) {
+  #block {
+    pointer-events: none;
+  } 
+  
   .container {
     width: 100%;
     margin: 0 auto;
